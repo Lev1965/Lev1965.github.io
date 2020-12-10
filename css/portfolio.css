@@ -11,6 +11,7 @@ body {
     letter-spacing: .2vw;
     font-family: Avant Garde, Helvetica;
     font-size: 1.5vw;
+    
 }
 
 /*This section contributes to the fade effect for the page that occurs when the page is loaded*/
@@ -245,6 +246,7 @@ background-color: darkgray; /* This specifies the background color behind the ho
     padding: 1.6%;
     background-color: #f2f2f2;
     height: 520px; /* this may need to be adjusted to fit the content*/
+    overflow: hidden;
 }
 
 .Column_2 {
@@ -314,14 +316,14 @@ img {
 /* Center align element hover effect */
 center:hover {
     transition: transform 2s;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 /*Paragraph element hover effect */
 p:hover {
     color: #00004d;
     transition: transform 2s;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 /*Heading 1 element hover effect */
@@ -334,7 +336,7 @@ h1:hover {
 img:hover {
     filter: grayscale(5%); /* Brings back most of the image's color when hovered over */
     transition: transform 1s;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 /* Contact form styling */
