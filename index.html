@@ -26,12 +26,9 @@
             <a class="active" href="#Home">Home</a>
             <a href="#Slideshow">Slideshow</a> <!--This is a new section-->
             <a href="#About">About</a>
-            <a href="GitHub">GitHub</a> 
-            <a onclick="openForm()">Contact</a> <!--This makes it so that our openForm function runs when we click Contact on the nav bar-->
+            <a href="#GitHub">GitHub</a> 
+            <a onclick="formbutton1()" href="#Contact">Contact</a> <!--This makes it so that our openForm function runs when we click Contact on the nav bar-->
         </div>
-
-    <!--This allows us to close the form when we click outside the nav bar or contact form-->
-        <div class="btn cancel" onclick="closeForm()">
 
     <!--Home-->
         <div id="Home">
@@ -78,14 +75,14 @@
                     <div class="mySlides fade">
                         <div class="Slide_Number">2 / 3</div>
                             <img class="Slide_Show_Images" src="pics/HTML_CSS_and_JavaScript.jpeg" style="width:100%">
-                                <div class="text">I am a junior software developer,<br /> trained in<br /> HTML, CSS, Java Script,</div>
+                                <div class="text">I am a software developer,<br /> trained in<br /> HTML, CSS, Java Script,</div>
                     </div>
 
                    <div class="mySlides fade">
                         <div class="Slide_Number">3 / 3</div>
                             <img class="Slide_Show_Images" src="pics/Coding_1.jpg" style="width:100%">
                                 <div class="text">
-                                    <a onclick="openForm" href="#Contact" style="color:white;">You can contact me today!</a>
+                                    <a onclick="formbutton1()" href="#Contact" style="color:white;">You can contact me today!</a>
                                 </div>
                  </div>
 
@@ -171,7 +168,7 @@
                         <br />
                         <br />
                         I am Software Developer and would love to work with you on your project. It is always a pleasure for me to work with a team and learn new
-                        things on daily basis while tackling challenges. <a href="#Contact">Contact</a>
+                        things on daily basis while tackling challenges. <a onclick="formbutton1()" href="#Contact">Contact</a>
                         me below!</p>
             </div>
         </div>
@@ -195,42 +192,47 @@
     </div>
 
     <!-- Contact Section -->
-    <script>
-        /* paste this in verbatim */
-        window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments);};
-      
-        /* customize formbutton here*/     
-        formbutton("create", {
-          action: "https://formspree.io/YOUR_FORM_ID",
-          title: "Contact",
-          fields: [
-            { 
-              type: "email", 
-              label: "Email:", 
-              name: "email",
-              required: true,
-              placeholder: "your@email.com"
+        <div id="Contact">
+        <script>
+            function formbutton1(){
+            /* paste this in verbatim */
+            window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments);};
+            /* customize formbutton here*/     
+            
+            formbutton("create", {
+            action: "https://formspree.io/YOUR_FORM_ID",
+            title: "Contact",
+            fields: [
+                { 
+                type: "email", 
+                label: "Email:", 
+                name: "email",
+                required: true,
+                placeholder: "your@email.com"
+                },
+                {
+                type: "textarea",
+                label: "Message:",
+                name: "message",
+                placeholder: "Write your message here?",
+                },
+                { type: "submit" }      
+            ],
+            styles: {
+                fontFamily: "Montserrat",
+                title: {
+                background: "gray",
+                },
+                button: {
+                background: "gray",
+                }
             },
-            {
-              type: "textarea",
-              label: "Message:",
-              name: "message",
-              placeholder: "Write your message here?",
-            },
-            { type: "submit" }      
-          ],
-          styles: {
-            fontFamily: "Montserrat",
-            title: {
-              background: "gray",
-            },
-            button: {
-              background: "gray",
-            }
-          },
-          initiallyVisible: true
-        });
-      </script>
+            initiallyVisible: true
+            });
+        };
+        </script>
+        </div>
+
     <!-- Footer Section -->
         <footer>
             <p>
