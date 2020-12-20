@@ -351,7 +351,7 @@ img:hover {
 .Pop_Up_Button {
     bottom: 1.75vw;
     right: 1.75vw;
-    width: 25vw;
+    width: 20vw;
     background-color: white;
     color: black;
     border: solid;
@@ -369,6 +369,7 @@ img:hover {
     position: fixed;
     bottom: 6px;
     right: 6px;
+    border-radius: 10px;
 }
 
 /* Form Styling */
@@ -384,6 +385,7 @@ img:hover {
     padding: .93vw;
     margin: .6vw 0 .6vw 0;
     border: none;
+    border-radius: 5px;
     background: Gainsboro;
     font-family: Helvetica, Avant Garde;
     font-size: 1vw;
@@ -394,6 +396,7 @@ img:hover {
     color: black;
     border-color: black;
     margin-bottom: 1vh;
+    
 }
 
 /* Close button */
@@ -413,6 +416,7 @@ button {
     cursor: pointer;
     width: 100%;
     height: auto;
+    border-radius: 10px;
 }
 
 /* Hover effect for buttons */

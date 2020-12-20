@@ -27,7 +27,7 @@
             <a href="#Slideshow">Slideshow</a> <!--This is a new section-->
             <a href="#About">About</a>
             <a href="#GitHub">GitHub</a> 
-            <a href="#Contact">Contact</a> <!--This makes it so that our openForm function runs when we click Contact on the nav bar-->
+            <a onclick="openForm()">Contact</a> <!--This makes it so that our openForm function runs when we click Contact on the nav bar-->
         </div>
 
     <!--Home-->
@@ -82,7 +82,7 @@
                         <div class="Slide_Number">3 / 3</div>
                             <img class="Slide_Show_Images" src="pics/Coding_1.jpg" style="width:100%">
                                 <div class="text">
-                                    <a onclick="formbutton1()" href="#Contact" style="color:white;">You can contact me today!</a>
+                                    <a onclick="openForm()" href="#Contact" style="color:white;">You can contact me today!</a>
                                 </div>
                  </div>
 
@@ -168,7 +168,7 @@
                         <br />
                         <br />
                         I am Software Developer and would love to work with you on your project. It is always a pleasure for me to work with a team and learn new
-                        things on daily basis while tackling challenges. <a onclick="formbutton1()" href="#Contact">Contact</a>
+                        things on daily basis while tackling challenges. <a onclick="openForm()" href="#Contact">Contact</a>
                         me below!</p>
             </div>
         </div>
@@ -192,53 +192,26 @@
     </div>
 
     <!-- Contact Section -->
-        <div id="Contact">
-            <!--
-            <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
-            <script>
-                window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
-                formbutton("create", {action: "https://formspree.io/YOUR_FORM_ID"})
-            </script>-->
-        <script>
-                 /* paste this in verbatim */
-                 window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments);};
-            /* customize formbutton here*/     
-           
-            formbutton("create", {
-            action: "https://formspree.io/YOUR_FORM_ID",
-            title: "Contact",
-            fields: [
-                { 
-                type: "email", 
-                label: "Email:", 
-                name: "email",
-                required: true,
-                placeholder: "your@email.com"
-                },
-                {
-                type: "textarea",
-                label: "Message:",
-                name: "message",
-                placeholder: "Write your message here?",
-                },
-                { type: "submit" },
-                { type: "reset"}    
-                
-            ],
-            styles: {
-                fontFamily: "Montserrat",
-                title: {
-                background: "gray",
-                },
-                button: {
-                background: "gray",
-                }
-            },
-            initiallyVisible: true
-            });
-        </script>
+                <div id="Contact">
+                    <button onclick="openForm()" class="Pop_Up_Button"> CONTACT </button>
+                        <div class="form-popup" id="myForm">
+                            
+                            <form action="https://formspree.io/levsoftwaredev@gmail.com" method="POST" class="form-container"> <!-- Here we are using a free online service form https://formspree.io/ to send our contact form to an email address of our choosing - note: it will not run unless live on the internet, you have to push it to your online website first -->
+                            <h1>Contact</h1>
+                                <label for="name"><b>Name</b></label>
+                                    <input type="text" placeholder="Type your name here" name="name" required>
+                                <label for="phone"><b>Phone</b></label>
+                                    <input type="text" placeholder="Enter your phone number here" name="phone">
+                                <label for="email"><b>Email</b></label>
+                                    <input type="text" placeholder="Type your email address here" name="email" required>
+                                <label for="message"><b>Message</b></label>
+                                    <input type="text" placeholder="Type your message here" name="message">
+                        <button type="submit" class="btn">SUBMIT</button>
+                        <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>  
+                        </form>
         
-        </div>
+                        </div>
+                </div>
 
     <!-- Footer Section -->
         <footer>
